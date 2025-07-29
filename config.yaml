@@ -1,0 +1,16 @@
+devices:
+  - ip: 192.168.1.1
+    name: MainRouter
+    community: public
+    monitor: true
+  - ip: 192.168.1.2
+    name: CoreSwitch
+    community: public
+    monitor: true
+alerts:
+  email: youremail@example.com
+  slack_webhook: https://hooks.slack.com/services/XXX/YYY/ZZZ
+thresholds:
+  ping_latency: 50   # ms
+  cpu_usage: 80      # percent
+  ram_usage: 80      # percent
